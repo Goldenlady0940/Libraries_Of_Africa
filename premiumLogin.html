@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: inline-block;
+            word-wrap: break-word;
+            background-color: red;
+            width:470px;
+            height:500px
+        }
+        aside{
+            align-items: left;
+            background-color: orange;
+            width:470px;
+            height:500px
+        }
+        .wrapper{
+            
+            background-color: green;
+        }
+        p{
+            
+            width:200px;
+            height:300px;
+            background-color: orange;
+            color: white;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        h2{
+            width: 200px; 
+            height: 70px; 
+            background-color: aqua; 
+            color: darkgray;
+             border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+            <aside>
+                <h1><center>PREMIUM USER</center></h1>
+                <h3 align="left">Have an Account?</h3>
+                <a href="homepage2.html" >Sign In</a>
+                <p>hello</p>
+                <h2>hi</h2>
+            </aside>
+        
+        <section>
+            <form action="" method="post">
+                <fieldset>
+                    <table  width="50%" height="5%">
+                        <!--name-->
+                        <div class="fname">
+                            <tr>
+                                <td><label for="fname">First Name</label></td>
+                                <td><label for="lname">Last Name</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="fname" id="fname" placeholder="Enter first name"></td>
+                                <td><input type="text" name="lname" id="lname" placeholder="Enter last name"></td>
+                            </tr>
+                        </div>
+                        <!--gender-->
+                        <div class="gender">
+                            <tr>
+                                <td><label for="gender">Gender</label></td>
+                                <td>
+                                    <input type="radio" name="gender" id="gender" value="male">
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="gender" value="female">
+                                    <label for="female">Female</label>
+                                </td>
+                            </tr>
+                        </div>
+                        <!--phone-->
+                        <div class="phone">
+                            <tr>
+                                <td><label for="phone">Phone</label></td>
+                                <td><input type="tel" name="phone" id="phone" pattern="[+][0-9]{3}-[0-9]{4}-[0-9]{3}" ></td>
+                            </tr>
+                        </div>
+                        <!--email-->
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" name="email" id="email"></td>
+                        </tr>
+        
+                    </table>
+                </fieldset>
+            </form>
+            
+        </section>
+    </div>
+   
+    
+</body>
+</html>

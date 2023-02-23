@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>library</title>
+    <style>
+       .header
+       {
+        background-color: white;
+        height: 98px
+       }
+        
+        .main
+        {
+            background-color:  mintcream;
+            border: 10px;
+        }
+        .img
+        {
+            background: url('libcov.jpg');
+            height: 490px;
+            width: 1350px
+           
+        }
+        .add
+        {
+            background-color:  burlywood;
+        }
+        #slideshow {
+            overflow: hidden;
+            height: 510px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+         
+         
+        .slide {
+            float: left;
+            height: 510px;
+            width: 1000px;
+        }
+         
+         
+        .slide-wrapper {
+            width: calc(1000px * 5);
+            
+            animation: slide 60s ease infinite;
+        }
+         
+        label select
+        {
+            width: 200px;
+        }
+        @keyframes slide {
+        
+            0% {
+                margin-left: 0px;
+            }
+            100% {
+                margin-left: calc(-1000px * 1);
+            }
+            25% {
+                margin-left: calc(-1000px * 2);
+            }
+            25% {
+                margin-left: calc(-1000px * 3);
+            }
+            75% {
+                margin-left: calc(-1000px * 4);
+            }
+            100% {
+                margin-left: calc(-1000px * 5);
+            }
+            
+        }
+    </style>
+</head>
+<body >
+    <div class="wrapper" >
+        <header class="header">
+                <table width="100%" height="100" 
+                cellspacing="1" cell padding ="2" >
+                    <tr>
+                        <td align="right"><h1><img src="logo1.jpg" alt=""></h1></td>
+                        <td><h1>Libraries Of Africa</h1></td>
+                        <td>
+                            <table align="right">
+                                <tr>
+                                    <td><nav><button style=" background-color: white;border-color: white ;font-size: medium;">My Shelf</button></nav></td>
+                                    <td><nav><button style=" background-color: white;border-color: white;font-size: medium;">Donate</button></nav></td>
+                                    <td><nav><button style=" background-color: white; border-color: white;font-size: medium;">Sign Up</button></nav></td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+        </header>
+        <section class="main">
+            <div class="img">
+                <table width="1350" height="490">
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <table bgcolor="mintcream" align="right" width="40%" height="30%" style="background-color: rgba(255, 228, 225, 0.5);" cellpadding="0">
+
+                                <tr>
+                                    
+                                    <td>
+                                        <h3><b><center> Which Library Are You Looking For?</center></b></h3>
+                                        <!--<center><input type="text" rows="2" cols="20" placeholder ="Search by Country Name.." list="country names"></center>-->
+                                       <label>
+                                            <center><select name="country" id="country">
+                                                <option value="">Search By Country</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Burundi">Burundi</option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Ethiopia">Ethiopia</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="Ghana">Ghana</option>
+                                                <option value="Nigeria">Nigeria</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="Zimbabwe">Zimbabwe</option>
+                                            </select></center> 
+                                        </label>
+                                    </td>
+                                </tr>            
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr></tr>
+                </table>
+                
+
+            </div>
+            <div class="add">
+                <h1 align="center">Welcome</h1>
+                <div class="about">
+                    <p><center>This website is dependent on a specific locale which is Africa. 
+                        Information about current libraries in Africa will be provided. It's useful for everyone who wants to level up their knowledge, enjoys reading, increase their creativity, change their perspectives, and more. 
+                        The website intends to solve accessibility of information about libraries specifically for self-taught people who want to discover more and could get the relevant information on where to get different resources. 
+                        In many of the communities we serve, young people have little to no access to reading materials beyond textbooks (when provided). So our main goal is to provide accurate, fast access to information to our people. 
+                        At this moment our library website won't be providing worldwide its Africa Limited Edition.</center></p>
+
+                </div>
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <p>+251-912-267-878</p>
+
+                </div>
+                <aside>
+
+                </aside>
+            </div>
+        </section>
+        <!--
+        <section class="main">
+            <main>
+                <h1>main</h1>
+                <aside>
+                    
+                </aside>
+                <div id="slideshow">
+                    <div class ="slide-wrapper">
+                        <div class="slide">
+                            <h1 class="1"> 
+                                <img src ="ethlib3..jpg" >
+                            </h1>
+                        </div>
+                        <div class="slide">
+                            <h1 class="2">
+                                <img src="ethlib2.jpg">
+                            </h1>
+                        </div>
+                        <div class="slide">
+                            <h1 class="3">
+                                <img src="ethlib1.jpg" >
+                            </h1>
+                        </div>
+                        <div class="slide">
+                            <h1 class="4" >
+                                <img src="ghanalib1.jpg">
+                            </h1>
+                        </div>
+                        <div class="slide">
+                            <h1 class="5">
+                                <img src="southlib1.jpg">
+                            </h1>
+                        </div>
+                    </div>
+                </div> 
+            </main>
+        </section>-->
+    </div>
+    <!--<datalist id="country names">
+        <option value="Algeria"></option>
+        <option value="Angola"></option>
+        <option value="Benin"></option>
+        <option value="Ethiopia"></option>
+        <option value="Ghana"></option>
+        <option value="Burundi"></option>
+    </datalist>-->
+</body>
+</html>
