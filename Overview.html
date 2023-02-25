@@ -5,8 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>overview</title>
+    <style>
+        #slideshow {
+           overflow: hidden;
+           height: 510px;
+           width: 1350px;
+           margin: 0 auto;
+       }
+        
+        
+       .slide {
+           float: left;
+           height: 510px;
+           width: 1350px;
+       }
+        
+        
+       .slide-wrapper {
+           width: calc(1350px * 5);
+           
+           animation: slide 60s ease infinite;
+       }
+       @keyframes slide {
+       
+       0% {
+           margin-left: 0px;
+       }
+       100% {
+           margin-left: calc(-1350px * 1);
+       }
+       25% {
+           margin-left: calc(-1350px * 2);
+       }
+       25% {
+           margin-left: calc(-1350px * 3);
+       }
+       75% {
+           margin-left: calc(-1350px * 4);
+       }
+       100% {
+           margin-left: calc(-1350px * 5);
+       }
+       
+   }
+   </style>
 </head>
 <body>
+  
+    <div id="slideshow">
+        <div class ="slide-wrapper">
+            <div class="slide">
+                <h1 class="1"> 
+                    <img src ="Images/ethlib3..jpg" >
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="2">
+                    <img src="Images/ethlib2.jpg">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="3">
+                    <img src="Images/ethlib1.jpg" >
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="4" >
+                    <img src="Images/ghanalib1.jpg">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="5">
+                    <img src="Images/southlib1.jpg">
+                </h1>
+            </div>
+        </div>
+    </div> 
+    <h1>List of countries with their respective libraries</h1>
+    <table width="1350px" >
+        <tr align="center">
+            <td>
+                <dl>  <dt><h2>Algeria</h2></dt>
+                    <dd> <a href="https://en.wikipedia.org/wiki/National_Library_of_Algeria">National Library of Algeria</a></dd>
+                    <dt><h2>Botswana</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/National_Library_Service_of_Botswana">National Library of Botswana</a></dd>
+                    <dt><h2>Burundi</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/Libraries_in_Burundi">National Library of Burundi</a></dd>
+                    <dt><h2>Ethiopia</h2></dt>
+                    <dd><a href="https://abrehot.org.et/opens-to-public/">Abrhot Library</a></dd>
+                    <dt><h2>Egypt</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/Egyptian_National_Library_and_Archives">National Library of Egypt</a></dd>
+                </dl>
+            </td>
+            <td>
+                <dl>
+                    <dt><h2>Ghana</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/Ghana_Library_Authority">National Library of Ghana</a></dd>
+                    <dt><h2>Nigeria</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/National_Library_of_Nigeria">National Library of Nigeria</a></dd>
+                    <dt><h2>South Africa</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/National_Library_of_South_Africa">National Library of South Africa</a></dd>
+                    <dt><h2>Zimbabwe</h2></dt>
+                    <dd><a href="https://en.wikipedia.org/wiki/National_Library_of_Zimbabwe">National Library of Zimbabwe</a></dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
     
+    
+        
 </body>
 </html>
