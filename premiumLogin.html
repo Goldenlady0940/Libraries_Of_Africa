@@ -6,38 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
         section {
             display: inline-block;
             word-wrap: break-word;
-            background-color: red;
-            width:470px;
-            height:500px
+            background-color: white;
+            width:800px;
+            height:700px
         }
         aside{
-            align-items: left;
-            background-color: orange;
             width:470px;
-            height:500px
+            height:550px;
+            padding-left: 0.5rem;
+            margin-left: 0.5rem;
+            float: left;
+            box-shadow: inset 5px 0 5px -5px #29627e;
+            font-style: italic;
+            color: #29627e;
+            background-color:   rgb(253, 212, 135);
+        }
+        .fname {
+            padding: 0;
+            width:100%;
+            height: 30px;
+            left: 0;
+            border: 1px solid #cdcdcd;
+            border-color: rgba(0,0,0,.15);
+            background-color: white;
+            font-size: 16px;
         }
         .wrapper{
             
-            background-color: green;
+            background-color: white;
         }
-        p{
+        .basic{
+            background-color: rgb(253, 212, 135);
+            color: black;
+        }
+        .premium{
+            background-color: greenyellow;
+            color: black;
             
-            width:200px;
-            height:300px;
-            background-color: orange;
-            color: white;
-            box-sizing: border-box;
-            border: 1px solid black;
         }
-        h2{
-            width: 200px; 
-            height: 70px; 
-            background-color: aqua; 
-            color: darkgray;
-             border: 1px solid black;
+        .finish
+        {
+            background-color: rgb(253, 212, 135);
+            height:50px;
+            width:100px;
+            border-radius: 20px;
+
         }
     </style>
 </head>
@@ -46,31 +63,48 @@
             <aside>
                 <h1><center>PREMIUM USER</center></h1>
                 <h3 align="left">Have an Account?</h3>
-                <a href="homepage2.html" >Sign In</a>
-                <p>hello</p>
-                <h2>hi</h2>
+                <a href="login page.html" >Sign In</a>
+                <table width="100%" height="400px">
+                    <div class="basic">
+                        <tr align="center">
+                            <td class="basic" ><h2>Basic</h2>
+                                <ul align="left">
+                                    <li>Checking out libraries location</li>
+                                </ul></td>
+                            <td class="premium"><h2>Premium</h2>
+                                <ul align="left">
+                                    <li>Checking libraries location</li>
+                                    <li>Borrow</li>
+                                    <li>Apply Donations</li>
+                                </ul></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><h3>Subscribe To $11/month<h3></td>
+                        </tr>
+                    </div>
+                </table>
             </aside>
-        
         <section>
             <form action="" method="post">
-                <fieldset>
-                    <table  width="50%" height="5%">
+                    <h1><center>Create New Account</center></h1>
+                    <table  width="100%" cellspacing="0" cellpadding="10" align="right">
                         <!--name-->
-                        <div class="fname">
+                        <div class="name">
                             <tr>
+                                
                                 <td><label for="fname">First Name</label></td>
                                 <td><label for="lname">Last Name</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text" name="fname" id="fname" placeholder="Enter first name"></td>
-                                <td><input type="text" name="lname" id="lname" placeholder="Enter last name"></td>
+                                <td align="right"><input type="text" class="fname" name="fname" id="fname" ></td>
+                                <td align="right"> <input type="text" class="fname" name="lname" id="lname"></td>
                             </tr>
                         </div>
                         <!--gender-->
                         <div class="gender">
                             <tr>
-                                <td><label for="gender">Gender</label></td>
-                                <td>
+                                <td><label for="gender">Gender:</label><br>
+                                
                                     <input type="radio" name="gender" id="gender" value="male">
                                     <label for="male">Male</label>
                                     <input type="radio" name="gender" id="gender" value="female">
@@ -82,15 +116,60 @@
                         <div class="phone">
                             <tr>
                                 <td><label for="phone">Phone</label></td>
-                                <td><input type="tel" name="phone" id="phone" pattern="[+][0-9]{3}-[0-9]{4}-[0-9]{3}" ></td>
+                                <td><label for="email">Email</label></td>
+                                
                             </tr>
                         </div>
                         <!--email-->
+                        <div class="email">
+                            <tr>
+                                <td><input class="fname" type="number" name="phone" id="phone"></td>
+                                <td><input  class="fname" type="email" name="email" id="email"></td>
+                            </tr>
+
+                        </div>
+                        <!--country-->
+                        <div class="country">
+                            <tr>
+                                
+                                <td><label for="country">Country</label></td>
+                                <td><label for="city">City</label></td>
+                                <td><label for="region">Region</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="fname" type="text" name="country" id="country"></td>
+                                <td><input class="fname" type="text" name="city" id="city" ></td>
+                                <td><input class="fname" type="text" name="region" id="region"></td>
+                            </tr>
+                        </div>
+                        <!--id-->
+                        <div class="id">
+                            <tr>
+                                
+                                <td><label for="id">National Id Number</label>
+                                 </tr>
+                            <tr>
+                                <td><input type="text" class="fname" name="id" id="id"></td>
+                            </td>
+                            </tr>
+                        </div>
+                       <div class="payment">
                         <tr>
-                            <td><label for="email">Email</label></td>
-                            <td><input type="email" name="email" id="email"></td>
+                            <td><h3>Mode Of payment</h3></td>
                         </tr>
-        
+                        <tr>
+                            <td><label for="pay">Please choose!</label><br>
+                                <input type="text" class="fname" name="pay" id="pay">
+                                <input type="image" src="CBE.jpg" alt="" align="center"></td>
+                            <td><br><input type="image" src="Paypal-Logo.png" alt=""></td>
+                            <td><br><input type="image" src="master.jpg" alt=""></td>
+                        </tr>
+                       </div>
+                       <div class="finishes">
+                        <tr>
+                            <td><button class="finish">Submit</button></td>
+                        </tr>
+                       </div>
                     </table>
                 </fieldset>
             </form>
