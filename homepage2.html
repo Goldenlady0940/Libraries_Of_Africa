@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>library</title>
+    <title>home</title>
     <style>
         .header
         {
@@ -31,7 +31,45 @@
         {
             width: 200px;
         }
+        .buts
+        {
+            background-color: white;
+            border-color: white ;
+            font-size: medium;
+        }
     </style>
+    <script type="text/javascript">
+        function functionClick()
+        {
+            document.getElementById("but1")
+        }
+        function functionClick2()
+        {
+            document.getElementById("but2")
+        }
+        function functionClick3()
+        {
+            document.getElementById("but3")
+        }
+        function functionClick3()
+        {
+            document.getElementById("but3")
+        }
+        function functionClick4()
+        {
+            document.getElementById("country")
+        }
+        var input=document.getElementById(country)
+        input.addEventListener("keypress", function(event)
+        {
+            if(event.key=="Enter")
+            {
+                event.preventDefault();
+                document.getElementById("country").click();
+            }
+        })
+
+    </script>
 </head>
 <body >
     <div class="wrapper" >
@@ -44,13 +82,13 @@
                         <td>
                             <table align="right">
                                 <tr>
-                                    <td><nav><button style=" background-color: white;border-color: white ;font-size: medium;">My Shelf</button></nav></td>
-                                    <td><nav><button style=" background-color: white;border-color: white;font-size: medium;">Log In</button></nav></td>
-                                    <td><nav><button style=" background-color: white; border-color: white;font-size: medium;">Premium</button></nav></td>
+                                    
+                                    <td><a id="but1" href="login page.html"><button onclick="functionClick()"class="buts">My Shelf</button></a></td>
+                                   <!--<td><nav><a id="but2" href="login page.html"><button onclick="functionClick2()" class="buts">Log In</button></a></nav></td>-->
+                                    <td><nav><a id="but3" href="premiumLogin.html"><button onclick="functionClick3()" class="buts">Sign Up</button></a> </nav></td>
                                 </tr>
                             </table>
                         </td>
-
                     </tr>
                 </table>
         </header>
@@ -69,7 +107,7 @@
                                     <td>
                                         <h3><b><center> Which Library Are You Looking For?</center></b></h3>
                                        <label>
-                                            <center><select name="country" id="country">
+                                            <center><select name="country" id="country" href="MainPage.html">
                                                 <option value="">Search By Country</option>
                                                 <option value="Algeria">Algeria</option>
                                                 <option value="Botswana">Botswana</option>

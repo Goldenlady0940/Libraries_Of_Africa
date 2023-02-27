@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+        .finish
+        {
+            background-color: rgb(253, 212, 135);
+            height:40px;
+            width:100px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form action="" method="get">
+
+   
+            <table align="center" width="600px" height="500px">
+                <h1><center>Profile Info</center></h1>
+                <div class="name">
+                    <tr>
+                        
+                        <td><label for="fname">First Name</label></td>
+                        <td><input type="text" class="fname" name="fname" id="fname" ></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name</label></td>
+                        <td> <input type="text" class="fname" name="lname" id="lname"></td>
+                   
+                    </tr>
+                </div>
+                <!--gender-->
+                <div class="gender">
+                    <tr>
+                        <td><label for="gender">Gender:</label><br></td>
+                        <td>
+                            <input type="radio" name="gender" id="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="gender" value="female">
+                            <label for="female">Female</label>
+                        </td>
+                    </tr>
+                </div>
+                <!--phone-->
+                <div class="phone">
+                    <tr>
+                        <td><label for="phone">Phone</label></td>
+                        <td><input class="fname" type="number" name="phone" id="phone"></td>
+                        
+                        
+                    </tr>
+                </div>
+                <!--email-->
+                <div class="email">
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input  class="fname" type="email" name="email" id="email"></td>
+                    </tr>
+    
+                </div>
+                <!--id-->
+                <div class="id">
+                    <tr>
+                        
+                        <td><label for="id">National Id Number</label>
+                        <td><input type="text" class="fname" name="id" id="id"></td>
+                    </td>
+                    </tr>
+                </div>
+                <!--country-->
+                <div class="country">
+                    <tr>
+                        
+                        <td><label for="country">Country</label></td>
+                        <td><input class="fname" type="text" name="country" id="country"></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><label for="city">City</label></td>
+                        <td><input class="fname" type="text" name="city" id="city" ></td>
+                       
+                    </tr>
+                </div>
+                <div class="username">
+                    <tr>
+                        <td><label for="us">UserName</label></td>
+                        <td><input class="usp" type="text" name="us" id="us"></td>
+                    </tr>
+                </div>
+                <!--password-->
+                <div class="username">
+                    <tr>
+                        <td><label for="psw">Password</label></td>
+                        <td><input class="usp" type="password" name="psw" id="psw"></td>
+                    </tr>
+                </div>
+               <div class="finishes">
+                <tr>
+                    <td></td>
+                    <td><button class="finish">Edit</button>
+                        <button class="finish">Save</button>
+                        <button class="finish">Delete</button></td>
+                </tr>
+               </div>
+            </table>
+        </form>
+</body>
+</html>
