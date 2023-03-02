@@ -33,19 +33,132 @@
         }
         .buts
         {
-            background-color: white;
+            background-color: rgba(255, 228, 225, 0.5);
             border-color: white ;
             font-size: medium;
         }
+        .log
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+        .log {
+        list-style: none;
+        }
+        .log{
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        margin: 20px 0;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: rgba(255, 228, 225, 0.5);
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.5s;
+        z-index: 1;
+        }
+        .log:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid rgba(255, 228, 225, 0.5);
+        border-bottom: 2px solid rgba(255, 228, 225, 0.5);
+        transform: scaleY(2);
+        opacity: 0;
+        transition: 0.3s;
+        }
+        .log:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 228, 225, 0.5);
+        transform: scale(0);
+        opacity: 0;
+        transition: 0.3s;
+        z-index: -1;
+        }
+        .log:hover {
+        color: #fff;
+        }
+        .log:hover:before {
+        transform: scaleY(1);
+        opacity: 1;
+        }
+        .log:hover:after {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    /*
+    .contact ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .contact ul li {
+        list-style: none;
+        margin: 0 15px;
+    }
+
+    .contact ul li a {
+    position: relative; 
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+    }
+
+    .contact  ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+    }
+
+    .contact ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+    }
+
+    .contact  ul li a:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+    }*/
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script type="text/javascript">
         function functionClick()
         {
             document.getElementById("but1")
-        }
-        function functionClick2()
-        {
-            document.getElementById("but2")
         }
         function functionClick3()
         {
@@ -57,8 +170,16 @@
         }
         function functionClick4()
         {
-            document.getElementById("country")
+            document.getElementById("co")
         }
+        function Mydrop(dropdown)
+        {
+            var option_value = dropdown.options[dropdown.selectedIndex].value;
+            var option_text = dropdown.options[dropdown.selectedIndex].text;
+            document.getElementById("country").click();
+        }
+
+        
         var input=document.getElementById(country)
         input.addEventListener("keypress", function(event)
         {
@@ -82,10 +203,8 @@
                         <td>
                             <table align="right">
                                 <tr>
-                                    
-                                    <td><a id="but1" href="login page.html"><button onclick="functionClick()"class="buts">My Shelf</button></a></td>
-                                   <!--<td><nav><a id="but2" href="login page.html"><button onclick="functionClick2()" class="buts">Log In</button></a></nav></td>-->
-                                    <td><nav><a id="but3" href="premiumLogin.html"><button onclick="functionClick3()" class="buts">Sign Up</button></a> </nav></td>
+                                    <td><a class="log" id="but1" href="loginpage.html"><button onclick="functionClick()"class="buts"> My Shelf</button></a></td>
+                                    <td><nav><a class="log" id="but3" href="premiumLogin.html"><button onclick="functionClick3()" class="buts">Sign Up</button></a> </nav></td>
                                 </tr>
                             </table>
                         </td>
@@ -107,7 +226,7 @@
                                     <td>
                                         <h3><b><center> Which Library Are You Looking For?</center></b></h3>
                                        <label>
-                                            <center><select name="country" id="country" href="MainPage.html">
+                                            <center><select onchange="Mydrop(this)" name="country"id="country"  >
                                                 <option value="">Search By Country</option>
                                                 <option value="Algeria">Algeria</option>
                                                 <option value="Botswana">Botswana</option>
@@ -119,21 +238,17 @@
                                                 <option value="Nigeria">Nigeria</option>
                                                 <option value="South Africa">South Africa</option>
                                                 <option value="Zimbabwe">Zimbabwe</option>
-                                            </select></center> 
+                                            </select> <a id="co" href="MainPage.html"><button onclick="functionClick4()" class="buts">..</button></a> </center> 
+                                           
                                         </label><br>
                                         <center><a href="Overview.html">Overview</a></center>
                                     </td>
-                                    
-                                </tr>      
-                                     
+                                </tr>  
                             </table>
-
                         </td>
                     </tr>
                     <tr></tr>
                 </table>
-                
-
             </div>
             <div class="add">
                 <h1 align="center">Welcome</h1>
@@ -145,14 +260,26 @@
                         At this moment our library website won't be providing worldwide its Africa Limited Edition.</center></p>
 
                 </div>
-                <div class="contact">
+                <div class="contacts">
                     <h2>Contact Us</h2>
-                    <p>+251-912-267-878</p>
-
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sebrina-abdulrezak-7a0ba6230">
+                              <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="www.telegram.com">
+                            <i class="fab fa-telegram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="www.secure.instagram.com">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                      </ul>
                 </div>
-                <aside>
-
-                </aside>
             </div>
         </section>
     </div>

@@ -16,6 +16,15 @@
 
         }
     </style>
+    <script>
+        function fun()
+        {
+            document.getElementById(req);
+        }
+        
+
+    </script>
+    <link rel="stylesheet" href="index.cs">
 </head>
 <body>
     <div class="wrapper">
@@ -23,43 +32,43 @@
 
         </article>
         <section>
-            <label for="name"><h1>Name of the country</h1></label>
-    <label for="names"><h1>Library name</h1></label>
+           <!-- <label for="name"><h1>Name of the country</h1></label>
+    <label for="names"><h1>Library name</h1></label>-->
     
     <table height="700px" width="1350px">
         <tr>
             <td colspan="4"><h2>Scientific Books</h2></td>
         </tr>
             <tr>
-                <td><img src="b1.jpg" alt=""></td>
-                <td><img src="b2.jpg" alt=""></td>
-                <td><img src="b3.jpg" alt=""></td>
-                <td><img src="b4.jpg" alt=""></td>
+                <td><img src="Images/b1.jpg" alt=""></td>
+                <td><img src="Images/b2.jpg" alt=""></td>
+                <td><img src="Images/b3.jpg" alt=""></td>
+                <td><img src="Images/b4.jpg" alt=""></td>
             </tr>
             <tr>
                 <td colspan="4"><h2>Biography Books</h2></td>
             </tr>
         
             <tr>
-                <td><img src="sc1.jpg" alt=""></td>
-                <td><img src="sc2.jpg" alt=""></td>
-                <td><img src="sc3.jpg" alt=""></td>
-                <td><img src="sc4.jpg" alt=""></td>
+                <td><img src="Images/sc1.jpg" alt=""></td>
+                <td><img src="Images/sc2.jpg" alt=""></td>
+                <td><img src="Images/sc3.jpg" alt=""></td>
+                <td><img src="Images/sc4.jpg" alt=""></td>
             </tr>
             <tr>
                 <td colspan="4"><h2>Kids Books</h2></td>
             </tr>
         
             <tr>
-                <td><img src="k1.jpg" alt=""></td>
-                <td><img src="k2.jpg" alt=""></td>
-                <td><img src="k3.jpg" alt=""></td>
-                <td><img src="k4.jpg" alt=""></td>
+                <td><img src="Images/k1.jpg" alt=""></td>
+                <td><img src="Images/k2.jpg" alt=""></td>
+                <td><img src="Images/k3.jpg" alt=""></td>
+                <td><img src="Images/k4.jpg" alt=""></td>
             </tr>
             <div class="finishes">
                 <tr>
                     <td></td><td></td><td></td>
-                    <td align="right"><button class="finish">Request Book</button>
+                    <td align="right"><a id="req" href="RequestPage.html"><button class="finish" onclick="fun()">Request Book</button></a></td>
                         
                 </tr>
                </div>

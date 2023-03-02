@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forget</title>
+    <title>login</title>
     <style>
         .log
         {
@@ -14,17 +14,36 @@
             width:100px;
             border-radius: 20px;
         }
-        
+        .usp {
+            padding: 0;
+            width:150%;
+            height: 30px;
+            left: 0;
+            border: 1px solid #cdcdcd;
+            border-color: rgba(0,0,0,.15);
+            background-color: white;
+            font-size: 1
+        }
+        .wrapper
+        {
+            background-color: white;
+        }
+        fieldset
+        {
+            display: inline;
+            width:500px;
+            height: 300px;
+        }
     </style>
-    <script>
+    <script type="text/javascript">
         function functionClick()
         {
             document.getElementById("login")
         }
-       
     </script>
+    
 </head>
-<body>
+<body bgcolor="mintcream">
     <div class="wrapper">
         <table width="1350" height="600" bgcolor="mintcream">
             <tr align="center">
@@ -38,7 +57,7 @@
                             </tr>
                             <div class="username">
                                 <tr>
-                                    <td><label for="us">New UserName</label></td>
+                                    <td><label for="us">UserName</label></td>
                                     <td><input class="usp" type="text" name="us" id="us"></td>
                                 </tr>
                             </div>
@@ -46,16 +65,22 @@
                             <!--password-->
                             <div class="psw">
                                 <tr>
-                                    <td><label for="psw"> New Password</label></td>
+                                    <td><label for="psw">Password</label></td>
                                     <td><input class="usp" type="password" name="psw" id="psw"></td>
                                 </tr>
                             </div>
                             <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                             
+                            <div class="forget">
+                                <tr>
+                                    <td></td>
+                                    <td><a href="forgetPage.html">Forget Password?</a></td>
+                                </tr>
+                            </div>
                             <div class="logs">
                                 <tr>
                                     <td></td>
-                                    <td><a id="login" href="loginpage.html"><button onclick="functionClick()" class="log">Reset</button></a></td>
+                                    <td><a id="login" href="MyshelfPage.html"><button onclick="functionClick()" class="log">Log In</button></a></td>
                                 </tr>
                             </div>
         
@@ -67,6 +92,7 @@
         </table>
         
     </div>
+    
     
 </body>
 </html>

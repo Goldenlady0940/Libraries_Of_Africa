@@ -15,12 +15,11 @@
             border-radius: 20px;
         }
     </style>
-     <script type="text/javascript">
-        function functionClick()
+    <script>
+        function func()
         {
-            document.getElementById("log")
+            document.getElementById("forget");
         }
-        
     </script>
 </head>
 <body>
@@ -38,15 +37,15 @@
                             <div class="psw">
                                 <tr>
                                     <td><label for="num"> Enter your phone number</label></td>
-                                    <td><input class="usp" type="number" name="num" id="num"></td>
+                                    <td><input class="usp" type="tel" name="num" id="num"></td>
                                 </tr>
                             </div>
                             <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                             <div class="logs">
                                 <tr>
                                     <td></td>
-                                    <td><a id="log" href="Resepage.html"><button onclick="functionClick()" class="log">Send</button></a></td>
-                                </tr>
+                                    <td><a id="forget" href="Resepage.html"><button onclick="func()" class="log">Reset</button></a></td>
+                                   </tr>
                             </div>
         
                         </table>
